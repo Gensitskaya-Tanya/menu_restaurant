@@ -1,8 +1,10 @@
+package domain;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Menu_in_restaurant")
-public class Menu {
+public class MenuRestaurant {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
@@ -14,10 +16,10 @@ public class Menu {
 	private int weight;
 	private boolean availabilityOfdiscounts;
 
-	public Menu() {
+	public MenuRestaurant() {
 	}
 
-	public Menu(String nameOfTheDish, double cost, int weight, boolean availabilityOfdiscounts) {
+	public MenuRestaurant(String nameOfTheDish, double cost, int weight, boolean availabilityOfdiscounts) {
 		this.nameOfTheDish = nameOfTheDish;
 		this.cost = cost;
 		this.weight = weight;
